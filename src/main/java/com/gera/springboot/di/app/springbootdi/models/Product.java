@@ -1,13 +1,13 @@
 package com.gera.springboot.di.app.springbootdi.models;
 
-public class Product {
-    
-    private Long Id;
+public class Product implements Cloneable{
+
+    private Long id;
     private String name;
     private Long price;
 
     public Product(Long id, String name, Long price) {
-        Id = id;
+        this.id = id;
         this.name = name;
         this.price = price;
     }
@@ -17,10 +17,10 @@ public class Product {
     }
 
     public Long getId() {
-        return Id;
+        return id;
     }
     public void setId(Long id) {
-        Id = id;
+        this.id = id;
     }
     public String getName() {
         return name;
@@ -35,5 +35,13 @@ public class Product {
         this.price = price;
     }
 
+    @Override
+    public Product clone() {
+        try {
+            return (Product) super.clone();
+        } catch (CloneNotSupportedException e) {
+            return new Product(id, name, price);
+        }
+    }
     
 }
