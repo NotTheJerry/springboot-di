@@ -3,13 +3,11 @@ package com.gera.springboot.di.app.springbootdi.repositories;
 import java.util.Collections;
 import java.util.List;
 
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Repository;
 
 import com.gera.springboot.di.app.springbootdi.models.Product;
 
-@Primary
-@Repository
+@Repository("productFoo")
 public class ProductRepositoryFoo implements ProductRepository{
 
     @Override
