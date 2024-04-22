@@ -31,8 +31,10 @@ public class ProductRepositoryJson implements ProductRepository {
 
     @Override
     public Product findById(Long id) {
-        // TODO Auto-generated method stub
-        return null;
+        return list.stream()
+        .filter(p -> p.getId().equals(id) )
+        .findFirst()
+        .orElseThrow();
     }
 
 }

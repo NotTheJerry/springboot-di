@@ -3,7 +3,6 @@ package com.gera.springboot.di.app.springbootdi.services;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
@@ -21,7 +20,7 @@ public class ProductServiceImpl implements ProductService {
     // @Qualifier("productFoo")
     private ProductRepository repository;
 
-    public ProductServiceImpl( @Qualifier("productList") ProductRepository repository, Environment environment) {
+    public ProductServiceImpl( @Qualifier("productJson") ProductRepository repository, Environment environment) {
         this.repository = repository;
         this.environment = environment;
     }
