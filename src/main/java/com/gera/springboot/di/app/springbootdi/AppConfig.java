@@ -2,7 +2,6 @@ package com.gera.springboot.di.app.springbootdi;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.PropertySource;
 
 import com.gera.springboot.di.app.springbootdi.repositories.ProductRepository;
